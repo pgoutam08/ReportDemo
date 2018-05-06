@@ -6,6 +6,7 @@
       <class name="Report.VerifyTitlePage">
         <methods>
           <include name="VerifyPageTitle"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- Report.VerifyTitlePage -->
     </classes>

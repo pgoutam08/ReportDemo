@@ -1,13 +1,11 @@
 package library;
 
 import java.io.File;
-import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 
 public class Utility {
 	
@@ -19,7 +17,7 @@ public class Utility {
 			TakesScreenshot screens = (TakesScreenshot) driver;
 			File source = screens.getScreenshotAs(OutputType.FILE);
 	
-			String destFilePath = "C:\\Users\\pattargv\\eclipse-workspace\\ReportDemo\\Screenshots\\"+screenshotName+".png";	
+			String destFilePath = System.getProperty("user.dir")+"\\Screenshots\\"+screenshotName+".png";	
 			
 			File destination = new File(destFilePath);
 			FileUtils.copyFile(source, destination);
